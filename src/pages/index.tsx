@@ -17,8 +17,6 @@ import {
   HydroIcon,
 } from "@/components/icons";
 
-const AnimatedImage = animated(ChakraImage);
-
 export default function Home() {
   const [loadingState, setLoadingState] = useState<"init" | "loading" | "ok">(
     "init"
@@ -117,12 +115,12 @@ const LoadingIconBar: React.FC<LoadingIconBarProps> = ({
   return (
     <Flex {...flexProps} style={style}>
       <PyroIcon boxSize={size} color={color} />
-      <CryoIcon boxSize={size} color={color} />
-      <DendroIcon boxSize={size} color={color} />
+      <HydroIcon boxSize={size} color={color} />
       <AnemoIcon boxSize={size} color={color} />
       <ElectroIcon boxSize={size} color={color} />
+      <DendroIcon boxSize={size} color={color} />
+      <CryoIcon boxSize={size} color={color} />
       <GeoIcon boxSize={size} color={color} />
-      <HydroIcon boxSize={size} color={color} />
     </Flex>
   );
 };
